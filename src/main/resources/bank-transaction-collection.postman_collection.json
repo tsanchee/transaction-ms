@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "cffc64fc-0ef0-4eed-ad63-94b3c0511c78",
+		"name": "bank-transaction-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Transaction-APIs",
+			"item": [
+				{
+					"name": "TransactionList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8020/api/v1/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"v1",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TransactionAdd",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"transactionType\":\"Retiro\",\r\n\t\"amount\": \"90.00\",\r\n\t\"transactionTime\": \"2021-10-20T10:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8020/api/v1/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"v1",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TransactionUpd",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idTransaction\": \"617633caeb20a0015db85507\",\r\n        \"cardId\": \"61763c935bfe2165e4b3c87f\",\r\n        \"transactionType\": \"Deposito\",\r\n        \"amount\": 450.0,\r\n        \"transactionTime\": \"2021-10-20T10:00:00.000+00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8020/api/v1/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"v1",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TransactionDel",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8020/api/v1/transactions/61763409eb20a0015db85511",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"61763409eb20a0015db85511"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TransactionSearchId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8020/api/v1/transactions/ids/617633caeb20a0015db85507",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"ids",
+								"617633caeb20a0015db85507"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TransactionSearchTypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8020/api/v1/transactions/types/Retiro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"types",
+								"Retiro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TransactionSearchByCardId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8020/api/v1/transactions/61763c935bfe2165e4b3c87f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"61763c935bfe2165e4b3c87f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
